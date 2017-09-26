@@ -1,14 +1,15 @@
 import 'react-native';
 import React from 'react';
-// import { Component } from './Hello';
+import App from './App';
+
+const sleep = (time) => new Promise(sucess => setTimeout(sucess, time));
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-it('renders correctly', () => {
-  // const tree = renderer.create(
-  //   <Component />
-  // );
-  // console.log(JSON.stringify(tree.toJSON(), null, '  '));
-  expect(true).toBe(true);
+it('app renders correctly', async () => {
+  const tree = renderer.create(<App />);
+  expect(tree).toMatchSnapshot();
+  await sleep(2000)
+  expect(tree).toMatchSnapshot();
 });

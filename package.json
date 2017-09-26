@@ -15,9 +15,15 @@
 		"babel-jest": "21.0.2",
 		"babel-preset-react-native": "4.0.0",
 		"jest": "21.1.0",
-		"react-test-renderer": "16.0.0-alpha.12"
+		"react-test-renderer": "16.0.0-alpha.12",
+		"whatwg-fetch": "^2.0.3",
+		"xhr2": "*"
 	},
 	"jest": {
-		"preset": "react-native"
+		"browser": true,
+		"preset": "react-native",
+		"setupFiles": [
+			"./jest/setup.js"
+		]
 	}
 }
