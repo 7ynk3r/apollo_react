@@ -1,0 +1,3 @@
+rootProject.name = 'apollo_react'
+
+include ':app'
